@@ -3,7 +3,6 @@
 A full-stack Support & Service Management System built with **React + Tailwind CSS (v4)** on the frontend and **FastAPI + MySQL** on the backend.  
 This system provides role-based access for **Super Admin, Admin, Engineer, and Customer** to manage customers, projects, sites, and support tickets.
 
-The application is designed to simulate a real-world enterprise support workflow.
 
 ---
 
@@ -61,7 +60,7 @@ The application is designed to simulate a real-world enterprise support workflow
 - Assign Engineers to Tickets  
 - View All Tickets  
 
-- Bulk Upload (CSV / XLSX)   -------(optional features)
+- Bulk Upload (CSV / XLSX)   
 
 ### 👨‍🔧 Engineer Dashboard
 - View only **assigned tickets**
@@ -110,12 +109,12 @@ ACCESS_TOKEN_EXPIRE_MINUTES=60
 Setup & Run
 
 1️⃣ Backend Setup
+
 cd backend
 pip install -r requirements.txt
-
 uvicorn app.main:app --reload
 
-Make sure MySQL is running and database credentials are correctly set in
+
 
 2️⃣ Frontend Setup
 cd frontend
@@ -123,6 +122,9 @@ npm install
 npm run dev
 
 
+###  Create a MySQL database,
+
+ --    CREATE DATABASE support_app_system;
 
 ## 🔑  Login Credentials
 
