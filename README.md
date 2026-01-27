@@ -61,7 +61,7 @@ The application is designed to simulate a real-world enterprise support workflow
 - Assign Engineers to Tickets  
 - View All Tickets  
 
-- Bulk Upload (CSV / XLSX)   -------(optional featurrs)
+- Bulk Upload (CSV / XLSX)   -------(optional features)
 
 ### 👨‍🔧 Engineer Dashboard
 - View only **assigned tickets**
