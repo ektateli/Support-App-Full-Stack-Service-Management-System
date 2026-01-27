@@ -7,7 +7,7 @@ class UserCreate(BaseModel):
     email: EmailStr
     password: str
     role: RoleEnum
-    ustomer_id: int | None = None
+    customer_id: int | None = None
 
 class UserOut(BaseModel):
     id: int
