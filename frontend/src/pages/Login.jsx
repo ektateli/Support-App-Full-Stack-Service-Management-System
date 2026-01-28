@@ -175,7 +175,7 @@ export default function Login() {
         {/* Device Information / Footer */}
         <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-slate-400 text-xs font-medium">
           <span className="flex items-center gap-1.5"><ShieldCheck className="w-3.5 h-3.5" /> Secure  Connection</span>
-          <span>&copy; 2025 Support </span>
+          <span>&copy; 2026 Support </span>
         </div>
       </div>
     </div>

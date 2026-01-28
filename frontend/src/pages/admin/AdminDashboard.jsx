@@ -254,7 +254,7 @@ export default function AdminDashboard() {
           <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" /> Sync: {new Date().toLocaleTimeString()}</span>
           <span>{new Date().toLocaleDateString()}</span>
         </div>
-        <div>&copy; 2025 SUPPORT .</div>
+        <div>&copy; 2026 SUPPORT .</div>
       </div>
     </div>
   );
