@@ -133,7 +133,7 @@ npm run dev
 |-------------|----------------------------|------------|
 | Super Admin | superadmin@support.com     | admin123   |
 | Admin       | admin@gmail.com            | 123456     |
-| Engineer    | ekta@gmail.com             | 123456     |
+| Engineer    | ekta@gmail.com             | vs     |
 | Customer    | niya@gmail.com             | 123456     |
 
 

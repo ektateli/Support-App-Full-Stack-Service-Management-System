@@ -147,7 +147,7 @@ export default function TicketDetail() {
                   <MessageSquare className="w-4 h-4" /> Customer Description
                 </div>
                 <p className="text-slate-700 leading-relaxed text-sm font-medium italic">
-                  {data.ticket.description || "--"}
+                  {data.ticket.issue || "--"}
                 </p>
               </div>
             </div>

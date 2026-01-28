@@ -196,7 +196,7 @@ export default function AdminTickets() {
                                     </div>
                                     <div className="flex items-center gap-2 text-[11px] text-slate-500 font-medium">
                                         <Clock className="w-3.5 h-3.5" />
-                                        Issued: {new Date(t.timestamp).toLocaleDateString()}
+                                        Issued: {new Date(t.created_at).toLocaleDateString()}
                                     </div>
                                 </div>
 

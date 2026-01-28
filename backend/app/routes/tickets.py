@@ -203,6 +203,7 @@ def list_all_tickets(
             "customer_name": t.customer.name if t.customer else "-",
             "project_name": t.project.name if t.project else "-",
             "site_name": t.site.name if t.site else "-",
+            "created_at": t.created_at,   
         })
 
     return result
