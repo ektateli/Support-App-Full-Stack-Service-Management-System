@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useContext} from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import { api } from "../../api/api";
 import {
   Ticket,
@@ -26,6 +27,7 @@ export default function TicketDetail() {
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     load();
@@ -190,7 +192,59 @@ export default function TicketDetail() {
           </div>
 
           {/* Update Status Form */}
-          <div className="bg-slate-900 rounded-[2.5rem] p-8 shadow-xl relative overflow-hidden">
+          {/* <div className="bg-slate-900 rounded-[2.5rem] p-8 shadow-xl relative overflow-hidden">
+            <Activity className="absolute -right-6 -bottom-6 w-32 h-32 text-white/5 rotate-12" />
+
+            <div className="relative z-10 space-y-6">
+              <div className="space-y-1">
+                <h3 className="text-white font-bold text-lg">Update Status</h3>
+                <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest">Engineer Actions</p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Current Modality</label>
+                  <select
+                    className="w-full bg-white/10 border border-white/10 text-white p-3 rounded-2xl outline-none focus:border-indigo-500 transition-all font-bold text-xs cursor-pointer appearance-none"
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                  >
+                    <option value="IN_PROGRESS" className="text-slate-900">IN PROGRESS</option>
+                    <option value="RESOLVED" className="text-slate-900">RESOLVED</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Progress Notes</label>
+                  <textarea
+                    className="w-full bg-white/10 border border-white/10 text-white p-4 rounded-2xl outline-none focus:border-indigo-500 transition-all font-medium text-xs min-h-[100px] resize-none placeholder:text-slate-500"
+                    placeholder="Detail the technical resolution steps..."
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                  />
+                </div>
+
+                <button
+                  onClick={update}
+                  disabled={updating || !comment.trim()}
+                  className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-black shadow-xl shadow-indigo-900/40 hover:bg-indigo-500 transition-all active:scale-95 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed group"
+                >
+                  {updating ? (
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                  ) : (
+                    <>
+                      <span>Post Update</span>
+                      <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </>
+                  )}
+                </button>
+              </div>
+            </div>
+          </div> */}
+
+
+          {user?.role === "ENGINEER" && (
+  <div className="bg-slate-900 rounded-[2.5rem] p-8 shadow-xl relative overflow-hidden">
             <Activity className="absolute -right-6 -bottom-6 w-32 h-32 text-white/5 rotate-12" />
 
             <div className="relative z-10 space-y-6">
@@ -239,6 +293,7 @@ export default function TicketDetail() {
               </div>
             </div>
           </div>
+)}
 
         </div>
       </div>

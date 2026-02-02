@@ -4,6 +4,9 @@ from app.database import Base
 import enum
 from datetime import datetime
 from sqlalchemy import DateTime
+import pytz
+
+IST = pytz.timezone("Asia/Kolkata")
 
 class TicketStatus(str, enum.Enum):
     OPEN = "OPEN"
@@ -35,4 +38,4 @@ class Ticket(Base):
     customer = relationship("Customer")
     project = relationship("Project")
     site = relationship("Site")
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(IST))
